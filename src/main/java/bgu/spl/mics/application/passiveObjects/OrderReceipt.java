@@ -8,21 +8,37 @@ package bgu.spl.mics.application.passiveObjects;
  * You may add fields and methods to this class as you see fit (including public methods).
  */
 public class OrderReceipt {
-	
+
+	private int orderId;
+	private String seller;
+	private Customer customer;
+	private String bookTitle;
+	private int bookPrice;
+	private int issuedTick;
+	private int orderTick;
+	private int proccessTick;
+	public OrderReceipt(int _orderId, String _seller,Customer _customer, int _bookPrice,String _bookTitle , int _issuedTick,int _orderTick ,int _proccessTick){
+		orderId=_orderId;
+		seller=_seller;
+		customer=_customer;
+		bookTitle= _bookTitle;
+		bookPrice = _bookPrice;
+		issuedTick=_issuedTick;
+		orderTick=_orderTick;
+		proccessTick=_proccessTick;
+	}
 	/**
      * Retrieves the orderId of this receipt.
      */
 	public int getOrderId() {
-		// TODO Implement this
-		return 0;
+		return orderId;
 	}
 	
 	/**
      * Retrieves the name of the selling service which handled the order.
      */
 	public String getSeller() {
-		// TODO Implement this
-		return null;
+		return seller;
 	}
 	
 	/**
@@ -31,40 +47,35 @@ public class OrderReceipt {
      * @return the ID of the customer
      */
 	public int getCustomerId() {
-		// TODO Implement this
-		return 0;
+		return customer.getId();
 	}
 	
 	/**
      * Retrieves the name of the book which was bought.
      */
 	public String getBookTitle() {
-		// TODO Implement this
-		return null;
+		return bookTitle;
 	}
 	
 	/**
      * Retrieves the price the customer paid for the book.
      */
 	public int getPrice() {
-		// TODO Implement this
-		return 0;
+		return bookPrice;
 	}
 	
 	/**
      * Retrieves the tick in which this receipt was issued.
      */
 	public int getIssuedTick() {
-		// TODO Implement this
-		return 0;
+		return issuedTick;
 	}
 	
 	/**
      * Retrieves the tick in which the customer sent the purchase request.
      */
 	public int getOrderTick() {
-		// TODO Implement this
-		return 0;
+		return orderTick;
 	}
 	
 	/**
@@ -72,7 +83,6 @@ public class OrderReceipt {
      * processing the order.
      */
 	public int getProcessTick() {
-		// TODO Implement this
-		return 0;
+		return proccessTick;
 	}
 }
